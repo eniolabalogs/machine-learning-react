@@ -27,11 +27,11 @@ const DiabetesPrediction = () => {
     setLoading(true); // Set loading to true when submitting
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/predict', {
+      const response = await fetch('https://diabetes-prediction-machine-learning-tj5e.onrender.com/predict', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'http://127.0.0.1:5000/predict' 
+          'Access-Control-Allow-Origin': 'https://diabetes-prediction-machine-learning-tj5e.onrender.com/predict' 
         },
         body: JSON.stringify({
           pregnancies: Number(formData.Pregnancies),
